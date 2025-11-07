@@ -2,6 +2,7 @@
 
 A simple solution to create a secure VPN, enabling safe remote access to a home network while keeping internal devices protected.
 
+
 ## Overview
 
 HomeNetVPN provides a straightforward way to establish a secure VPN connection to your home network, allowing you to:
@@ -9,6 +10,8 @@ HomeNetVPN provides a straightforward way to establish a secure VPN connection t
 - Browse the internet through your home connection
 - Maintain security and privacy while away from home
 - Keep internal network devices protected from external threats
+
+<p align="center"> <img src="media/general-architecture.png" alt="General Architecture" width="600"> </p>
 
 ## Features
 
@@ -25,16 +28,7 @@ HomeNetVPN provides a straightforward way to establish a secure VPN connection t
 - Port forwarding capability on your router
 - Basic networking knowledge
 
-## Installation
 
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/home-net-vpn.git
-cd home-net-vpn
-
-# Run setup script
-sudo ./setup.sh
-```
 
 ## Configuration
 
@@ -44,24 +38,10 @@ sudo ./setup.sh
 4. **Port Forwarding**: Enable necessary ports on your router
 
 ## Usage
+- Setting Up Pritunl on a Home Server Follow these steps to install Pritunl on a home server using this documentation:
+https://docs.pritunl.com/kb/vpn/getting-started/installation
 
-### Starting the VPN Server
-```bash
-sudo systemctl start homenetvpn
-sudo systemctl enable homenetvpn
-```
 
-### Connecting Clients
-```bash
-# Connect to your home VPN
-./connect.sh your-home-ip-or-domain
-```
-
-### Monitoring Connections
-```bash
-# View active connections
-./status.sh
-```
 
 ## Security Considerations
 
@@ -77,35 +57,3 @@ sudo systemctl enable homenetvpn
 - **Connection timeout**: Check firewall and port forwarding
 - **Authentication failed**: Verify certificates and credentials
 - **DNS resolution**: Ensure proper DNS configuration
-
-### Logs
-```bash
-# View VPN logs
-sudo journalctl -u homenetvpn -f
-```
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Support
-
-For issues and questions:
-- Open an issue on GitHub
-- Check the troubleshooting section
-- Review the documentation
-
-## Roadmap
-
-- [ ] Web-based management interface
-- [ ] Mobile app support
-- [ ] Advanced routing options
-- [ ] Multi-site connectivity
-- [ ] Enhanced monitoring dashboard
